@@ -19,11 +19,10 @@ public class Exercice_1 {
 
         String nom = parties[0].toUpperCase(); // nom en majuscule
         String prenom = parties[1].substring(0, 1).toUpperCase() + 
-                        parties[2].substring(1).toLowerCase(); // première lettre majuscule
+                        parties[1].substring(1).toLowerCase(); // première lettre majuscule
 
         return nom + " " + prenom;
     }
-
     // Programme principal pour tester
     public static void main(String[] args) {
         String saisie = "    En-Nassiri ahmed  ";
