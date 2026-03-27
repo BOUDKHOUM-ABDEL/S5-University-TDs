@@ -1,42 +1,40 @@
-package TD_3;
+package JAVA.TD_3;
+
+import java.util.Scanner;
 
 public class Exercice_1 {
-
-    // Méthode pour nettoyer et formater le nom complet
-    public static String nettoyerNom(String saisie) {
-        // 1. Supprimer les espaces au début et à la fin
-        String texte = saisie.trim();
-
-        // 2. Remplacer les "-" par des espaces
-        texte = texte.replace("-", " ");
-
-        // 3. Séparer nom et prénom (en supposant qu'il y a un espace entre les deux)
-        String[] parties = texte.split("\\s+"); // découpe par un ou plusieurs espaces
-
-        if (parties.length < 2) {
-            return "Format invalide (nom et prénom requis)";
-        }
-
-        String nom = parties[0].toUpperCase(); // nom en majuscule
-        String prenom = parties[1].substring(0, 1).toUpperCase() + 
-                        parties[1].substring(1).toLowerCase(); // première lettre majuscule
-
-        return nom + " " + prenom;
-    }
-    // Programme principal pour tester
     public static void main(String[] args) {
-        String saisie = "    En-Nassiri ahmed  ";
-        String resultat = nettoyerNom(saisie);
-        System.out.println("Avant nettoyage : \"" + saisie + "\"");
-        System.out.println("Après nettoyage : \"" + resultat + "\"");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Veuillez saisir le nom et prenom :");
+        String saisie = scanner.nextLine();
+        
+        // Nettoyer les espaces au début et à la fin
+        saisie = saisie.trim();
+        
+        // Remplacer les '-' par des espaces
+        saisie = saisie.replace("-", " ");
+        
+        // On suppose que le dernier mot est le prénom et le reste est le nom
+        // Ou bien, on peut traiter chaque mot. "En-Nassiri ahmed" -> "EN NASSIRI" "Ahmed"
+        // Le plus simple c'est de séparer selon l'espace et de supposer que le dernier mot est le prénom
+        String[] mots = saisie.split("\\s+");
+        if (mots.length >= 2) {
+            String prenom = mots[mots.length - 1];
+            StringBuilder nomBuilder = new StringBuilder();
+            
+            for (int i = 0; i < mots.length - 1; i++) {
+                nomBuilder.append(mots[i].toUpperCase()).append(" ");
+            }
+            String nom = nomBuilder.toString().trim();
+            
+            // Format prenom
+            String prenomFormatte = prenom.substring(0, 1).toUpperCase() + prenom.substring(1).toLowerCase();
+            
+            System.out.println("Resultat : " + nom + " " + prenomFormatte);
+        } else if (mots.length == 1) {
+            System.out.println("Resultat : " + mots[0].toUpperCase());
+        }
+        
+        scanner.close();
     }
 }
-
-// Exercice 1 : Nettoyer un formulaire utilisateur
-//  Un utilisateur saisit son nomet prenom avec des espaces ou des caractères 
-// inutiles, par exemple «    En-Nassiri ahmed  ». Pour uniformiser les noms, écrire un 
-// programme qui :
-// •nettoie la chaîne des espaces au début et fin.
-// •met le nom en majuscule
-// •met la première lettre du prénom en majuscule et le reste en minuscule
-// •remplace les - par des espaces

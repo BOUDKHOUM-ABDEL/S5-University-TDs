@@ -1,0 +1,72 @@
+Faculté des Sciences Appliquées Ait Melloul
+Université Ibn Zohr
+TD 1
+Programmation Java
+Exercice 1 : 
+Déterminez le type de la variable resultat pour chacune des expressions suivantes sans 
+qu’on provoque une erreur de compilation :
+Exercice 2 : 
+Un jeu vidéo stocke le score du joueur dans un double. On veut convertir ce score en une 
+note (char) basée sur des paliers entiers.
+•
+Déclarez double score = 84.7;
+•
+Convertissez ce score en int (ce qui va le tronquer, c'est voulu).
+•
+Divisez cet int par 10 pour obtenir une "catégorie" (un int de 0 à 10).
+•
+Utilisez un switch sur cette catégorie pour affecter une note à une variable char 
+grade ainsi:
+◦10 et 9 : 'A'
+◦8 : 'B'
+◦7 : 'C'
+◦6 : 'D'
+◦Autre (default) : 'F'
+•
+ Affichez la note (grade).
+Exercice 3 : 
+Écrire un programme qui calcule la factorielle d’un entier n (déclaré constante au début 
+du programme). 
+Rappel : La factorielle d'un nombre entier n est le produit (la multiplication) de tous les 
+entiers positifs de 1 jusqu'à n.
+Exercice 4 : 
+Écrire un programme qui teste si le nombre n est parfait.
+Rappel : Un nombre est parfait s’il est égal à la somme de ses diviseurs (hors lui-même).
+Exemple : 6 = 1 + 2 + 3
+Pr. KADIM Ayoub
+1/2
+2025/2026
+// 2.
+byte b1 = 10;
+byte b2 = 20;
+??? resultat2 = b1 + b2;
+// 1.
+int a = 10;
+double b = 5.5;
+??? resultat1 = a + b;
+// 3.
+String s = "100";
+int i = 50;
+??? resultat3 = s + i;
+// 4.
+char c = 'A'; // 'A' a la 
+valeur 65
+int j = 1;
+??? resultat4 = c + j;
+
+Faculté des Sciences Appliquées Ait Melloul
+Université Ibn Zohr
+Exercice 5 : 
+Affiche  tous  les  nombres  premiers  entre  min et  max, données  en  arguments  du 
+main(String args[]) .
+Rappel : Un nombre premier est un entier supérieur à 1 qui n'a aucun diviseur à part 1 et 
+lui-même.
+•
+Exemples : 2, 3, 5, 7, 11 sont premiers.
+•
+Contre-exemples : 4 (divisible par 2), 9 (divisible par 3), 1 (cas spécial), 0 (cas 
+spécial).
+Pr. KADIM Ayoub
+2/2
+2025/2026
+
