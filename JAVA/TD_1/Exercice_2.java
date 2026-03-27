@@ -1,4 +1,4 @@
-package TD_1;
+package JAVA.TD_1;
 
 public class Exercice_2 {
     public static void main(String[] args) {

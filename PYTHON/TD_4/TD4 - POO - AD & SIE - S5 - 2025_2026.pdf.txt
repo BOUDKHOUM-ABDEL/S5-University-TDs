@@ -1,0 +1,65 @@
+ 
+Programmation Python 
+Filières AD & SIE 
+S5 
+2025/2026 
+ 
+TD4  
+ 
+Exercice 1 :  
+1. Créez une classe CompteBancaire avec les attributs privés : titulaire, solde et devise. 
+2. Ajoutez des méthodes : 
+o deposer(montant) 
+o retirer(montant) 
+o afficher_solde() 
+3. Créez une classe Client contenant : 
+o un nom, un prénom, et une liste de comptes (composition) 
+o une méthode ajouter_compte() et afficher_comptes() 
+4. Testez le programme en créant un client avec plusieurs comptes. 
+Exercice 2 :  
+Reprenez la classe CompteBancaire : 
+1. Rendez les attributs privés (__solde, __devise). 
+2. Ajoutez des accesseurs et mutateurs contrôlés : 
+o Impossible d’avoir un solde négatif. 
+o La devise doit appartenir à une liste prédéfinie (["MAD", "USD", "EUR"]). 
+3. Testez la protection des données à travers des essais erronés. 
+Exercice 3 :  
+1. Créez une classe Forme avec : 
+o une méthode surface() renvoyant 0 
+o une méthode description() renvoyant "Forme géométrique" 
+2. Créez des classes dérivées : 
+o Rectangle (attributs : longueur, largeur) 
+o Cercle (attribut : rayon) 
+
+3. Redéfinissez surface() pour chaque sous-classe. 
+4. Testez avec une liste de formes et affichez leur surface et description. 
+Exercice 4 :  
+1. Créez une classe Personne (nom, âge, méthode afficher_infos()). 
+2. Créez une classe Employe (salaire, poste). 
+3. Créez une classe Formateur (matière_enseignée). 
+4. Créez une classe FormateurPermanent héritant de Employe et Formateur. 
+o Redéfinissez afficher_infos() pour inclure toutes les informations. 
+5. Testez le comportement et le MRO (method resolution order). 
+Exercice 5 :  
+1. Créez une classe CollectionFormes qui contient une liste d’objets Forme. 
+2. Rendez-la itérable (en implémentant __iter__ et __next__). 
+3. Testez le polymorphisme en parcourant la collection et en appelant surface() sur 
+chaque forme, sans se soucier de leur type. 
+Exercice 6 :  
+1. Créez une classe Vecteur2D(x, y). 
+2. Implémentez : 
+o __add__ pour additionner deux vecteurs, 
+o __sub__ pour leur différence, 
+o __eq__ pour tester l’égalité, 
+o __str__ pour un affichage clair. 
+3. Ajoutez une méthode norme() pour calculer la norme du vecteur. 
+4. Testez vos opérations avec plusieurs instances. 
+Exercice 7 :  
+1. Créez une classe abstraite Employe avec : 
+o attributs : nom, age 
+o méthode abstraite calculer_salaire() 
+2. Créez des sous-classes : 
+o EmployeHoraire (salaire = taux_horaire × heures) 
+o EmployeMensuel (salaire = salaire_fixe) 
+3. Créez une liste mixte d’employés et affichez le salaire de chacun. 
+
